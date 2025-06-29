@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #6fa4e6;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    background-color: rgba(25, 34, 41, 0.345);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.logo img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.menu {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkd {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+}
+
+ul {
+    float: right;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 12px;
+    padding-right: 20px;
+}
+
+ul li a:hover {
+    color: #182525;
+    transition: all 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 85px auto;
+}
+
+.text {
+    color: aliceblue;
+    width: 40%;
+}
+
+.text h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.image {
+    width: 30%;
+}
+
+.image img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.info {
+    width: 100%;
+    min-height: 100vh;
+    color: #033043;
+    padding: 20px;
+}
+
+.hed {
+    height: 65px;
+    background-color: #59a6ee;
+    text-align: center;
+    padding-top: 11px;
+}
+
+.product-box {
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.category h2 {
+    font-size: 20px;
+    color: #0077cc;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+label {
+    display: block;
+    padding: 8px 0;
+    font-size: 15px;
+}
+.category b{
+    color:rgb(8, 6, 137);
+}
+
+.invoice {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-list {
+    margin-top: 15px;
+}
+
+.invoice-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.remove {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+#form-section {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-section input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#form-section button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-section button:hover {
+    background-color: #218838;
+}
+@media (max-width: 768px) {
+    .checkd {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        right: -250px; /* مخفية أوليًا */
+        width: 220px;
+        height: 100vh;
+        background-color: rgba(18, 14, 22, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 40px;
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+
+    .menu li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .menu li a:hover {
+        background: #3a3737;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
