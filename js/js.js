@@ -29,7 +29,15 @@ function submitOrder() {
     message += `الطلب:\n`;
     message += `${orderList.join("\n")}`;
 
+    // استبدال السطور الجديدة بـ %0A لتظهر بشكل صحيح في الواتساب
+    const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0A');
+
     // فتح الواتساب
-    const whatsappURL = `https://wa.me/201098941965?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/201098941965?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
 }
+document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('check').checked = false;
+        });
+    });
