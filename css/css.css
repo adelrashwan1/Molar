@@ -26,8 +26,8 @@ header {
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -265,14 +265,14 @@ input[type="checkbox"] {
   }
 
   .logo img {
-    height: 40px;
+    height: 70px;
     width: auto;
   }
 
   .checkd {
     display: block;
     position: static; /* خلي الزر داخل الـ flex */
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
   }
