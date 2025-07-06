@@ -11,10 +11,7 @@ function submitOrder() {
     let orderList = [];
 
     checkboxes.forEach(cb => {
-        const label = cb.closest("label");
-        if (label) {
-            orderList.push(label.textContent.trim());
-        }
+        orderList.push(cb.value.trim()); // ✅ تم التعديل هنا لاستخدام value بدل textContent
     });
 
     if (orderList.length === 0) {
@@ -29,15 +26,17 @@ function submitOrder() {
     message += `الطلب:\n`;
     message += `${orderList.join("\n")}`;
 
-    // استبدال السطور الجديدة بـ %0A لتظهر بشكل صحيح في الواتساب
+    // ترميز الرسالة
     const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0A');
 
     // فتح الواتساب
     const whatsappURL = `https://wa.me/201098941965?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
 }
+
+// غلق القائمة الجانبية بعد الضغط على أي رابط داخلها
 document.querySelectorAll('.menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('check').checked = false;
-        });
+    link.addEventListener('click', () => {
+        document.getElementById('check').checked = false;
     });
+});
